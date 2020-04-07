@@ -20,6 +20,7 @@ a {
 	background: var(--background-color);
 	padding: 8px 24px;
 	font-family: 'Roboto', sans-serif;
+	margin-bottom: 50px;
 }
 
 .navbar_logo {

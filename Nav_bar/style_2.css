@@ -1,0 +1,54 @@
+:root {
+	--text-color: #fff;
+	--background-color: #263343;
+	--accent-color: #ffe082;
+}
+
+html,
+body {
+	margin: 0;
+}
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+ul {
+	margin: 0;
+	padding-left: 0;
+}
+li {
+	list-style: none;
+}
+.navbar {
+	background-color: var(--background-color);
+	display: flex;
+	padding: 8px 24px;
+	font-family: 'Roboto', sans-serif;
+	justify-content: space-between;
+}
+.navbar_logo {
+	color: var(--text-color);
+	font-size: 30px;
+	font-family: 'East Sea Dokdo', cursive;
+}
+.navbar_logo i {
+	color: var(--accent-color);
+	margin-right: 5px;
+}
+.navbar_menu {
+	display: flex;
+}
+.navbar_menu li {
+	padding: 8px 12px;
+}
+
+.navbar li a:hover {
+	color: var(--accent-color);
+}
+
+.navbar_icons {
+	display: flex;
+}
+.navbar_icons li {
+	padding: 8px 12px;
+}
