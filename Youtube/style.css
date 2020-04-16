@@ -1,5 +1,235 @@
+:root {
+	/* color:	; */
+	--white-color: #ffffff;
+	--black-color: #212121;
+	--blue-color: #1d83df;
+	--red-color: #ff0000;
+	--grey-dark-color: #909090;
+	--grey-light-color: #e0e0e0;
+
+	/* size */
+	--side-padding: 12px;
+	--avatar-size: 36px;
+	--padding: 12px;
+
+	/* font-size */
+	--font-large: 18px;
+	--font-medium: 14px;
+	--font-small: 12px;
+	--font-micro: 10px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+button,
+button:focus {
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
 html,
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+}
+
+/* header*/
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--padding);
+	background-color: var(--black-color);
+	color: var(--white-color);
+}
+header .logo {
+	font-size: var(--font-large);
+}
+header .logo i {
+	color: var(--red-color);
+}
+header a {
+	color: var(--white-color);
+	text-decoration: none;
+}
+header .icons .fa-search {
+	margin-right: var(--side-padding);
+}
+
+/* player */
+.player {
+	position: sticky;
+	top: 0;
+	text-align: center;
+	background-color: var(--black-color);
+}
+.player video {
+	width: 100%;
+	height: 100%;
+	max-width: 1000px;
+}
+
+/* info	 */
+body > .info {
+}
+.info li {
+	list-style-type: none;
+}
+.info > .metadata {
+	padding: var(--padding);
+}
+
+.info .metadata .hashTag {
+	font-size: var(--font-small);
+	display: flex;
+	color: var(--blue-color);
+}
+.info .metadata .hashTag li {
+	margin-right: var(--padding);
+}
+.info .metadata .titleAndBtn {
+	display: flex;
+}
+
+.info .metadata .titleAndBtn .title {
+	font-size: var(--font-medium);
+	margin-right: var(--padding);
+}
+.info .metadata .titleAndBtn .title.clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.info .metadata .titleAndBtn .moreBtn {
+	height: 100%;
+	background-color: var(--white-color);
+	color: var(--grey-dark-color);
+	transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleAndBtn .moreBtn.clicked {
+	transform: rotate(180deg);
+}
+.info .views {
+	font-size: var(--font-small);
+	color: var(--grey-dark-color);
+}
+
+/* action */
+.info .action {
+	display: flex;
+	justify-content: space-around;
+	margin: var(--padding) 0;
+}
+.info .action button {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: var(--font-small);
+	background-color: var(--white-color);
+	color: var(--grey-dark-color);
+}
+.info .action li button i {
+	color: var(--grey-dark-color);
+	font-size: var(--font-large);
+	margin: 0 auto;
+	margin-bottom: calc(var(--padding) / 2);
+}
+.info .action li button i.active {
+	color: var(--blue-color);
+}
+
+/* chanel */
+.info .chanel {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--grey-light-color);
+	border-bottom: 1px solid var(--grey-light-color);
+	align-items: center;
+	padding: var(--padding);
+}
+.info .chanel .metadata {
+	display: flex;
+	align-items: center;
+}
+
+.info .chanel .metadata img {
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	border-radius: 50%;
+	align-items: center;
+}
+.info .chanel .metadata .info {
+	display: flex;
+	flex-direction: column;
+	font-size: var(--font-medium);
+}
+
+.chanel .metadata .info .name {
+	margin-right: var(--padding);
+}
+.chanel .metadata .info .subscribers {
+	font-size: var(--font-small);
+	color: var(--grey-dark-color);
+}
+.chanel .subscribe {
+	background: none;
+	color: var(--red-color);
+	text-transform: uppercase;
+	font-size: var(--font-small);
+}
+
+.upNext {
+	padding: var(--padding);
+}
+.upNext > .title {
+	color: var(--grey-dark-color);
+	font-size: var(--font-medium);
+}
+.upNext .item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: var(--padding);
+}
+.upNext .item .img {
+	flex: 1 1 35%;
+	margin-right: var(--padding);
+}
+.upNext .item .img img {
+	width: 100%;
+}
+.upNext .info {
+	flex: 1 1 65%;
+	display: flex;
+	flex-direction: column;
+}
+.upNext .info .title {
+	font-size: var(--font-small);
+	margin-bottom: 5px;
+}
+.upNext .moreBtn {
+	height: 100%;
+	flex: 1 1 5%;
+	background: none;
+}
+.upNext .info .name,
+.upNext .info .views {
+	font-size: var(--font-small);
+}
+
+.infoAndUpnext {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	.infoAndUpnext {
+		flex-direction: row;
+	}
 }
